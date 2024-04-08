@@ -1,0 +1,20 @@
+.box-books{
+    border: 1px gray solid;
+    border-radius: 15px;
+    width: 70%;
+    margin: auto;
+    padding: 25px;
+}
+
+.box-books .review{
+    margin-top: 25px;
+    display: flex;
+    gap: 25px;
+}
+
+.box-books .review div{
+    width: 49%;
+    border: 1px gray solid;
+    border-radius: 15px;
+    padding: 25px;
+}

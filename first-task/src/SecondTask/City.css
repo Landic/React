@@ -1,0 +1,19 @@
+.info-city{
+    border: 1px gray solid;
+    border-radius: 15px;
+    width: 70%;
+    margin: auto;
+    padding: 25px;
+}
+
+.info-city .img{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.info-city .img img{
+    margin-top: 25px;
+    width: 40%;
+    border-radius: 15px;
+}
