@@ -42,3 +42,36 @@
   margin-top: 25px;
   margin-bottom: 25px;
 }
+
+.header{
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  height: 50px;
+  margin-bottom: 25px;
+}
+
+.header .menu{
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  width: 100%;
+}
+
+.header .menu a{
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  height: 25px;
+  text-align: center;
+  padding: 12px;
+  width: 150px;
+}
+
+.header .menu a:hover{
+  background-color: rgb(211, 211, 211);
+  transition: 0.2s;
+}
+
+.header .menu a:active{
+  background-color: rgb(196, 196, 196);
+}
