@@ -10,7 +10,7 @@ function App() {
   <div>
     <Name name="Данила" />
     <Age age={20} />
-    <Admin isAdmin={true} />
+    <Admin isAdmin={false} />
   </div>
   );
 }
