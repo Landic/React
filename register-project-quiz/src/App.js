@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Register from './pages/Register/Register';
 
 function App() {
   return (
     <>
-    
+      <Register/>
     </>
   );
 }

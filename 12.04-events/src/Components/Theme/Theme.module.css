@@ -1,0 +1,16 @@
+.butt{
+    width: 75px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(221, 221, 221);
+    margin-right: 10px;
+}
+
+.butt:hover{
+  background-color: rgb(202, 202, 202);
+  transition: 0.2s;
+}
+.butt:active{
+  background-color: rgb(170, 170, 170);
+}
