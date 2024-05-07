@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useProducts } from "../Context/ProductContext";
-import styles from './AdminPanel.module.css'; 
 
 export default function AdminPanel() {
     const [newProduct, setNewProduct] = useState({ title: "", price: "" });
@@ -25,7 +24,7 @@ export default function AdminPanel() {
         <>
             <h1>Admin Panel</h1>
             <h2>Add new product</h2>
-            <form className={styles['form-admin']} onSubmit={handleSubmit}>
+            <form className='form-admin' onSubmit={handleSubmit}>
                 <input type="text" name="title" value={newProduct.title} onChange={handleInputChange} placeholder="Name product"/>
                 <input type="number" name="price" value={newProduct.price} onChange={handleInputChange} placeholder="Price"/>
                 <button type="submit">Add</button>

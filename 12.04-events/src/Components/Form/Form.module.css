@@ -1,36 +1,64 @@
-.container-message{
-    border-radius: 10px;
-    border: 1px solid gray;
-    width: 50%;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.containerMessage {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto; /* Центрирование по вертикали и горизонтали */
+    max-width: 500px; /* Уменьшение ширины */
+    text-align: center; /* Центрирование содержимого по горизонтали */
 }
 
-.message{
-    margin: auto;
-    border-radius: 10px;
-    border: 1px solid gray;
-    width: 50%;
+.message {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 15px;
 }
 
-.form-group{
-    display: flex;
-    flex-direction: column;
-    width: 250px;
+.formGroup {
+    margin-bottom: 15px;
+    text-align: left; /* Выравнивание текста внутри формы по левому краю */
 }
 
-.form-group input{
-    height: 20px;
-    border-radius: 10px;
-    border: 1px solid gray;
-    padding: 5px;
+.formGroup label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
 }
 
-.form-group textarea{
-    height: 20px;
-    border-radius: 10px;
-    border: 1px solid gray;
-    padding: 5px;
+.formGroup input,
+.formGroup textarea {
+    width: 25%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.formGroup textarea {
+    resize: vertical;
+}
+
+.error {
+    border-color: red;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Зеленый цвет фона */
+    color: white; /* Белый цвет текста */
+    padding: 10px 20px; /* Отступы вокруг текста */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 4px; /* Закругляем углы */
+    cursor: pointer; /* Изменяем указатель мыши при наведении */
+    transition: background-color 0.3s; /* Плавное изменение цвета фона */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Изменяем цвет фона при наведении */
 }

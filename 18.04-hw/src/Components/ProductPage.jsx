@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useProducts } from "../Context/ProductContext";
-import styles from './ProductPage.module.css'
+
 
 export default function ProductPage() {
     const { id } = useParams();
@@ -13,7 +13,7 @@ export default function ProductPage() {
     const { title, price } = product;
   
     return (
-      <div className={styles['box']}>
+      <div className='box'>
         <p>Name: {title}</p>
         <p>Price: {price}$</p>
       </div>

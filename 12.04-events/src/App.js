@@ -10,15 +10,15 @@ import Form from './Components/Form/Form';
 function App() {
   return (
     <>
-    <h1>Task 1</h1>
+    <h3>Task 1</h3>
     <TextEditor/>
-    <h1>Task 2</h1>
+    <h3>Task 2</h3>
     <Counter/>
-    <h1>Task 3</h1>
+    <h3>Task 3</h3>
     <Theme/>
-    <h1>Task 4</h1>
+    <h3>Task 4</h3>
     <PhotoEditor/>
-    <h1>Task 5</h1>
+    <h3>Task 5</h3>
     <Form/>
     </>
   );

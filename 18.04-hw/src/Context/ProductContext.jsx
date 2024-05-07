@@ -5,18 +5,18 @@ const ProductContext = createContext();
 export const ProductProvider = ({ children }) => {
     const initialProducts = [
       {
-        title: "Помидор",
-        price: 20,
+        title: "Шоколад",
+        price: 40,
         id: 0,
       },
       {
-        title: "Огурец",
-        price: 25,
+        title: "Рыба",
+        price: 50,
         id: 1,
       },
       {
-        title: "Мясо",
-        price: 225,
+        title: "Креветка",
+        price: 100,
         id: 2,
       },
     ];

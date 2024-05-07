@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
-import styles from './Layout.module.css'
 
 
 export default function Layout() {
@@ -8,7 +7,7 @@ export default function Layout() {
     <>
       <header>
         <nav>
-          <ul className={styles['header']}>
+          <ul className='header'>
             <li>
               <Link to="/">Home</Link>
             </li>

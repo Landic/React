@@ -1,16 +1,19 @@
-.butt{
-    width: 75px;
-    height: 40px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(221, 221, 221);
-    margin-right: 10px;
+.button {
+  width: 100px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4CAF50; /* Зеленый цвет фона */
+  color: white; /* Белый цвет текста */
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.butt:hover{
-  background-color: rgb(202, 202, 202);
-  transition: 0.2s;
+.button:hover {
+  background-color: #45a049; /* Изменяем цвет фона при наведении */
 }
-.butt:active{
-  background-color: rgb(170, 170, 170);
+
+.button:active {
+  background-color: #3e8e41; /* Изменяем цвет фона при активации кнопки */
 }

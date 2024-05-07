@@ -1,25 +1,39 @@
-.editor {
-    width: 40%;
-    height: 100px;
-    font-size: 14px;
-}
-.butt{
+.controls {
   display: flex;
   gap: 5px;
   margin-bottom: 10px;
 }
-.butt button{
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-  background-color: rgb(221, 221, 221);
-}
-.butt button:hover{
-    background-color: rgb(202, 202, 202);
-    transition: 0.2s;
-  }
 
-  .butt button:active{
-    background-color: rgb(170, 170, 170);
-  }
+.controls button {
+  height: 35px;
+  border: none;
+  background-color: #4CAF50; /* Зеленый цвет фона */
+  color: white; /* Белый цвет текста */
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s; /* Плавное изменение цвета фона и текста */
+  text-align: center; /* Выравниваем текст по горизонтали */
+}
+
+.controls button:hover {
+  background-color: #45a049; /* Изменяем цвет фона при наведении */
+}
+
+.controls button:active {
+  background-color: #3e8e41; /* Изменяем цвет фона при активации кнопки */
+}
+
+.editor {
+  width: 40%;
+  height: 100px;
+  font-size: 14px;
+  border: 1px solid #ccc; /* Добавляем границу */
+  border-radius: 8px; /* Закругляем углы */
+  padding: 10px; /* Добавляем внутренние отступы */
+  resize: none; /* Запрещаем изменение размера текстового поля */
+  outline: none; /* Убираем стандартное выделение поля */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
+.editor:focus {
+  border-color: #4CAF50; /* Изменяем цвет границы при фокусе */
+}

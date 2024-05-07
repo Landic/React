@@ -1,69 +1,75 @@
-import React, { useState } from 'react'
-import styles from './texteditor.module.css'
-
+import React, { useState } from 'react';
+import styles from './texteditor.module.css';
 
 export default function TextEditor() {
-    const [isBold, setIsBold] = useState(false)
-	const [isItalic, setIsItalic] = useState(false)
-	const [isUnderline, setIsUnderline] = useState(false)
-	const [isUppercase, setIsUppercase] = useState(false)
-	const [size, setSize] = useState('14px')
-	const [family, setFamily] = useState('Arial')
-	const [color, setColor] = useState('#000000') 
+    const [bold, setBold] = useState(false);
+    const [italic, setItalic] = useState(false);
+    const [underline, setUnderline] = useState(false);
+    const [uppercase, setUppercase] = useState(false);
+    const [size, setSize] = useState('14px');
+    const [family, setFamily] = useState('Arial');
+    const [color, setColor] = useState('#000000');
 
-	const toggleBold = () => {
-		setIsBold(!isBold)
-	}
+    const toggleBold = () => {
+        setBold(!bold);
+    };
 
-	const toggleItalic = () => {
-		setIsItalic(!isItalic)
-	}
+    const toggleItalic = () => {
+        setItalic(!italic);
+    };
 
-	const toggleUnderline = () => {
-		setIsUnderline(!isUnderline)
-	}
+    const toggleUnderline = () => {
+        setUnderline(!underline);
+    };
 
-	const toggleCase = () => {
-		setIsUppercase(!isUppercase)
-	}
+    const toggleUppercase = () => {
+        setUppercase(!uppercase);
+    };
 
-	const onChangeSize = e => {
-		setSize(e.target.value)
-	}
+    const onChangeSize = (e) => {
+        setSize(e.target.value);
+    };
 
-	const onChangeFamily = e => {
-		setFamily(e.target.value)
-	}
-    const onChangeColor = e => {
-		setColor(e.target.value)
-	}
-  return (
-    <>
-			<div className={styles['butt']}>
-				<button className={isBold ? styles.active : ''} onClick={toggleBold}>B</button>
+    const onChangeFamily = (e) => {
+        setFamily(e.target.value);
+    };
 
-				<button className={isItalic ? styles.active : ''} onClick={toggleItalic}>I</button>
-				<button className={isUnderline ? styles.active : ''} onClick={toggleUnderline}>U</button>
-				<button className={isUppercase ? styles.active : ''} onClick={toggleCase}>Tt</button>
+    const onChangeColor = (e) => {
+        setColor(e.target.value);
+    };
 
-				<select name='myFontSize' value={size} onChange={onChangeSize}>
-					<option value='12px'>12px</option>
-					<option value='14px'>14px</option>
-					<option value='16px'>16px</option>
-					<option value='20px'>20px</option>
-				</select>
-
-				<select name='myFontFamily' value={family} onChange={onChangeFamily}>
-					<option value='Arial'>Arial</option>
-					<option value='Impact'>Impact</option>
-					<option value='Times New Roman'>Times New Roman</option>
-				</select>
-
-				<input type='color' value={color} onChange={onChangeColor}/>
-			</div>
-
-			<textarea className={styles['editor']} style={{ fontWeight: isBold ? 'bold' : 'normal', fontStyle: isItalic ? 'italic' : 'normal', textDecoration: isUnderline ? 'underline' : 'none', textTransform: isUppercase ? 'uppercase' : 'none', fontSize: size, fontFamily: family, color: color,}}
-			/>
-		</>
-  )
+    return (
+        <>
+            <div className={styles.controls}>
+                <button className={bold ? styles.active : ''} onClick={toggleBold}>B</button>
+                <button className={italic ? styles.active : ''} onClick={toggleItalic}>I</button>
+                <button className={underline ? styles.active : ''} onClick={toggleUnderline}>U</button>
+                <button className={uppercase ? styles.active : ''} onClick={toggleUppercase}>Tt</button>
+                <select name="fontSize" value={size} onChange={onChangeSize}>
+                    <option value="12px">12px</option>
+                    <option value="14px">14px</option>
+                    <option value="16px">16px</option>
+                    <option value="20px">20px</option>
+                </select>
+                <select name="fontFamily" value={family} onChange={onChangeFamily}>
+                    <option value="Arial">Arial</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+                <input type="color" value={color} onChange={onChangeColor} />
+            </div>
+            <textarea
+                className={styles.editor}
+                style={{
+                    fontWeight: bold ? 'bold' : 'normal',
+                    fontStyle: italic ? 'italic' : 'normal',
+                    textDecoration: underline ? 'underline' : 'none',
+                    textTransform: uppercase ? 'uppercase' : 'none',
+                    fontSize: size,
+                    fontFamily: family,
+                    color: color,
+                }}
+            />
+        </>
+    );
 }

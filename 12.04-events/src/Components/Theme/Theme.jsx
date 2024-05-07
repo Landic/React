@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
-import styles from './Theme.module.css'
+import React, { useState } from 'react';
+import styles from './Theme.module.css';
 
-
-export default function Theme() {
-    const [theme, setTheme] = useState('light');
+export default function CustomTheme() {
+    const [currentTheme, setCurrentTheme] = useState('light');
 
     const toggleTheme = () => {
-        setTheme(!theme);
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        setCurrentTheme(newTheme);
         const body = document.querySelector('body');
-        if (theme) {
+        if (newTheme === 'light') {
             body.style.backgroundColor = 'rgb(255, 255, 255)';
             body.style.color = 'rgb(0, 0, 0)';
         } else {
@@ -16,9 +16,15 @@ export default function Theme() {
             body.style.color = 'rgb(255, 255, 255)';
         }
     };
-  return (
-    <>
-        <input className={styles['butt']} type="button" value="Тема" onClick={toggleTheme} />
-    </>
-  )
+
+    return (
+        <>
+            <input
+                className={styles.button}
+                type="button"
+                value="Toggle Theme"
+                onClick={toggleTheme}
+            />
+        </>
+    );
 }
